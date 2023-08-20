@@ -1,47 +1,41 @@
----
-# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Testing
-  description: Welcome to your new dashboard!
+  title: Highlander Auditorium
+  description: Production Dashboard
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+      target: newtab
+    - title: Documentation
+      path: https://dashy.to/docs
+      target: newtab
 appConfig:
-  theme: colorful
-
-# Main content - An array of sections, each containing an array of items
+  theme: nord
+  layout: auto
+  iconSize: medium
+  language: en
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
-  
+  - name: Servers
+    icon: fa-solid fa-server
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: HA-Skynet
+        icon: favicon
+        url: http://10.128.38.50:5000/
+        id: 0_746_haskynet
+      - title: HA-Sentinel
+        icon: favicon
+        url: http://10.128.38.44:5000/
+        id: 1_746_hasentinel
+      - title: Filemaker Admin
+        icon: favicon
+        url: https://10.128.38.55:16000/admin-console
+        id: 2_746_filemakeradmin
+      - title: Unifi Building Net
+        icon: favicon
+        url: https://10.128.38.54:8443/manage/site/default/dashboard
+        id: 3_746_unifibuildingnet
